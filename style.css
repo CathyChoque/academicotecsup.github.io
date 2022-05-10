@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: #00AEEF;
+    --secundaryColor: #231F20;
+    --primaryColor600: #55C9F4;
+    --secundaryColor300: #B6B4B5;
+}
+
+body {
+    font-family: Roboto;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 45px;
+}
+
+button {
+    width: 226px;
+    height: 54px;
+    margin: 30px 0;
+    background: var(--secundaryColor);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    align-items: center;
+}
+.logoTecsup {
+    width: 190px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav img {
+    width: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+    padding: 40px 0;
+}
+/** whatsappButton **/
+.whatsappButton img{
+    background-color: #00BB33;
+    width: 60px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    z-index: 2;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: width 0.3s;
+}
+
+.whatsappButton img:hover {
+    width: 63px;
+    box-shadow:none;
+}
+
+/** primer contenedor **/
+.firstContainer {
+    height: 750px;
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: var(--primaryColor600);
+}
+.leftContainer h1 {
+    text-align: center;
+    color: white;
+}
+
+.leftContainer button:hover {
+    cursor: pointer;
+    border: 3px solid var(--secundaryColor);
+    background: var(--primaryColor600);
+    color: var(--secundaryColor);
+    font-weight: bold;
+}
+.leftContainer img {
+    width: 65%;
+}
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+    border-radius: 0px 20px 20px 0px;
+    border-top: 2px solid var(--secundaryColor300);
+    border-right: 2px solid  var(--secundaryColor300);
+    border-bottom: 2px solid var(--secundaryColor300);
+    border-left: 0px solid var(--secundaryColor300);
+}
+.rightContainer img{
+    width: 70%;
+}
+.rightContainer h1 {
+    text-align: center;
+    color: var(--secundaryColor);
+    font-weight: lighter;
+}
+.rightContainer button:hover {
+    cursor: pointer;
+    border: 3px solid var(--secundaryColor);
+    background: white;
+    color: var(--secundaryColor);
+    font-weight: bold;
+}
+/** responsive **/
+@media screen and (max-width: 1023px) {
+    h1 {
+        font-size: 35px;
+    }
+    .rightContainer img{
+        width: 90%;
+    }
+    .leftContainer img {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 25px;
+        margin: 10px 0;
+    }
+    
+    button {
+        width: 125px;
+        height: 35px;
+        margin: 5px 0;
+        background: var(--secundaryColor);
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    nav img {
+        width: 18px;
+    }
+    nav ul li {
+        padding: 30px 0;
+        margin-left: 10px;
+    }
+    .logoTecsup {
+        width: 120px;
+    }
+    .menu {
+        padding: 0 25px;
+    }
+    .firstContainer {
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 15px;
+        grid-template-columns: 1fr;
+    }
+    .leftContainer {
+        width: auto;
+        height: 365px;
+        border-radius: 20px 20px 0px 0px;
+    }
+    .leftContainer img {
+        width: 250px;
+    }
+    .rightContainer {
+        height: 365px;
+        border-radius: 0px 0px 20px 20px;
+        border-top: 0px solid var(--secundaryColor300);
+        border-right: 1px solid  var(--secundaryColor300);
+        border-bottom: 1px solid var(--secundaryColor300);
+        border-left: 1px solid var(--secundaryColor300);
+    }
+    .rightContainer img{
+        width: 250px;
+    }
+    .secondContainer {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        border: 1px solid var(--secundaryColor300);
+        width: 300px;
+        border-radius: 15px;
+    }
+    .secondContainer img{
+        padding-top: 5px;
+        width: 300px;
+    }
+    .boxText {
+        border: none;
+        padding: 0 0 30px;
+    }
+    .whatsappButton img{
+        width: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
